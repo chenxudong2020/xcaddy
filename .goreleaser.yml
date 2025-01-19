@@ -68,6 +68,15 @@ builds:
   - -trimpath
   ldflags:
   - -s -w
+  args: 
+  - xcaddy
+  - build
+  - --output
+  - ./xcaddy-build/xcaddy
+  - --with
+  - plugin1=github.com/caddy-dns/cloudflare
+  - --with
+  - plugin2=github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive
 
 archives:
   - format_overrides:
